@@ -17,7 +17,7 @@ export const aboutParagraphs = [
   'Currently I am working on a new course called AI Camp, an innovative course where high school students create real-world products and startups while exploring the frontiers of AI.',
   "I started this blog to share the insights I learn every day. Most blogs focus on education in Artificial Intelligence and general computer science, while others share the life lessons I've learned.",
 ]
-
+M
 // blog
 export const blogHeadLine = "What I've thinking about."
 export const blogIntro =

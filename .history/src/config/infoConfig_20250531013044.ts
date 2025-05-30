@@ -8,7 +8,7 @@ export const headline ='Student of Tongji University'
 export const introduction =
   "My future is waiting for me to explore!"
 export const email = 'hanwang721124@gmail.com'
-export const githubUsername = 'Maytroshka373'
+export const githubUsername = 'Mayt'
 
 // about page
 export const aboutMeHeadline = 'Who Are You and Why Should I Care?'
