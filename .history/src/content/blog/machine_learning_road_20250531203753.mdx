@@ -1,0 +1,250 @@
+Sure! Here’s an expanded version of the handouts that cover the key machine learning techniques: Regression, Classification, Clustering, and Dimensionality Reduction. These will be the core topics for Week 1.
+
+---
+
+### **Handouts: Key Machine Learning Techniques**
+
+---
+
+### **1. Regression**
+
+Regression is a supervised learning technique used to predict continuous values.
+
+#### **1.1. Simple Linear Regression**
+
+* **Definition**: A method for modeling the relationship between a dependent variable (target) and one independent variable (feature).
+* **Model**:
+
+  $$
+  y = w_0 + w_1x
+  $$
+
+  where:
+
+  * $y$ is the predicted value (target),
+  * $w_0$ is the intercept,
+  * $w_1$ is the coefficient of the feature $x$.
+
+#### **1.2. Multiple Linear Regression**
+
+* **Definition**: Extension of simple linear regression to predict a target using multiple features.
+* **Model**:
+
+  $$
+  y = w_0 + w_1x_1 + w_2x_2 + \dots + w_nx_n
+  $$
+
+  where:
+
+  * $y$ is the predicted value,
+  * $x_1, x_2, \dots, x_n$ are the features,
+  * $w_0, w_1, \dots, w_n$ are the weights.
+
+#### **1.3. Evaluation Metrics**
+
+* **Mean Squared Error (MSE)**: Measures the average squared difference between actual and predicted values.
+
+  $$
+  MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+  $$
+* **R-squared ( $R^2$ )**: Measures the proportion of the variance in the target that is predictable from the features.
+
+  $$
+  R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}
+  $$
+
+#### **1.4. Regularization**
+
+* **L1 (Lasso)** and **L2 (Ridge)** regularization are used to prevent overfitting.
+
+  * **Lasso**: Adds a penalty proportional to the absolute value of the coefficients.
+  * **Ridge**: Adds a penalty proportional to the square of the coefficients.
+
+---
+
+### **2. Classification**
+
+Classification is a supervised learning technique used to predict categorical outcomes.
+
+#### **2.1. Logistic Regression**
+
+* **Definition**: Despite its name, it is used for binary classification problems. It estimates the probability that an instance belongs to a class.
+* **Model**:
+
+  $$
+  p(y = 1|X) = \frac{1}{1 + e^{-(w_0 + w_1x)}}
+  $$
+
+  where $p(y = 1|X)$ is the probability of class 1, and $w_0, w_1$ are the model parameters.
+
+#### **2.2. Support Vector Machines (SVM)**
+
+* **Definition**: SVM finds the hyperplane that best separates the classes in the feature space.
+* **Key Concept**: Maximizing the margin between the closest points of each class, called support vectors.
+* **Linear SVM Model**:
+
+  $$
+  f(x) = w^T x + b
+  $$
+
+  where $w$ is the weight vector and $b$ is the bias term.
+
+#### **2.3. Decision Trees**
+
+* **Definition**: A tree-like model that splits the data into different regions based on feature values.
+* **Key Concepts**:
+
+  * **Gini Impurity**: Measures the "impurity" of a node.
+
+    $$
+    Gini = 1 - \sum_{i=1}^{K} p_i^2
+    $$
+
+    where $p_i$ is the probability of class $i$.
+  * **Entropy**: Measures the disorder or uncertainty of a node.
+
+    $$
+    Entropy = -\sum_{i=1}^{K} p_i \log(p_i)
+    $$
+
+#### **2.4. K-Nearest Neighbors (K-NN)**
+
+* **Definition**: K-NN is a non-parametric method where the class of a point is determined by the majority class of its nearest neighbors.
+* **Key Concept**: Distance measure (Euclidean distance is common).
+
+  $$
+  d(x, x') = \sqrt{\sum_{i=1}^{n} (x_i - x'_i)^2}
+  $$
+
+#### **2.5. Evaluation Metrics for Classification**
+
+* **Accuracy**: The fraction of correct predictions.
+
+  $$
+  Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+  $$
+* **Precision and Recall**:
+
+  * **Precision**: Measures the correctness of positive predictions.
+
+    $$
+    Precision = \frac{TP}{TP + FP}
+    $$
+  * **Recall**: Measures the completeness of positive predictions.
+
+    $$
+    Recall = \frac{TP}{TP + FN}
+    $$
+* **F1-Score**: Harmonic mean of precision and recall.
+
+  $$
+  F1 = 2 \times \frac{Precision \times Recall}{Precision + Recall}
+  $$
+* **Confusion Matrix**: Shows the true positives, false positives, true negatives, and false negatives.
+
+---
+
+### **3. Clustering**
+
+Clustering is an unsupervised learning technique used to group similar instances.
+
+#### **3.1. K-Means Clustering**
+
+* **Definition**: K-means partitions the data into $k$ clusters by minimizing the sum of squared distances between points and their cluster centers.
+* **Algorithm**:
+
+  1. Initialize $k$ centroids randomly.
+  2. Assign each point to the nearest centroid.
+  3. Recalculate centroids based on the assigned points.
+  4. Repeat steps 2 and 3 until convergence.
+
+#### **3.2. DBSCAN (Density-Based Spatial Clustering)**
+
+* **Definition**: DBSCAN is a density-based clustering algorithm that groups together points that are closely packed, marking as outliers the points that are alone in low-density regions.
+* **Key Concepts**:
+
+  * **Epsilon ($\epsilon$)**: The radius within which to search for neighboring points.
+  * **MinPts**: Minimum number of points required to form a dense region.
+
+#### **3.3. Hierarchical Clustering**
+
+* **Definition**: Builds a tree of clusters, where each node represents a cluster.
+* **Types**:
+
+  * **Agglomerative (Bottom-Up)**: Starts with individual points as their own clusters and merges them.
+  * **Divisive (Top-Down)**: Starts with all points in one cluster and recursively splits them.
+
+#### **3.4. Evaluation Metrics for Clustering**
+
+* **Silhouette Score**: Measures how similar a point is to its own cluster compared to other clusters.
+
+  $$
+  Silhouette = \frac{b - a}{\max(a, b)}
+  $$
+
+  where $a$ is the average distance to points in the same cluster and $b$ is the average distance to points in the nearest cluster.
+
+---
+
+### **4. Dimensionality Reduction**
+
+Dimensionality Reduction techniques aim to reduce the number of features while preserving the essential information.
+
+#### **4.1. Principal Component Analysis (PCA)**
+
+* **Definition**: PCA is a linear technique that transforms the data into a new coordinate system where the axes (principal components) correspond to directions of maximum variance in the data.
+* **Goal**: To reduce the number of features while retaining most of the variance.
+* **Steps**:
+
+  1. Standardize the data (zero mean, unit variance).
+  2. Compute the covariance matrix.
+  3. Calculate the eigenvalues and eigenvectors of the covariance matrix.
+  4. Select the top $k$ eigenvectors (principal components).
+
+#### **4.2. t-SNE (t-distributed Stochastic Neighbor Embedding)**
+
+* **Definition**: t-SNE is a non-linear technique primarily used for the visualization of high-dimensional data in 2D or 3D.
+* **Key Concept**: Minimizes the divergence between probability distributions in the high-dimensional and low-dimensional spaces.
+
+#### **4.3. Linear Discriminant Analysis (LDA)**
+
+* **Definition**: LDA is a supervised dimensionality reduction technique that maximizes the separability of the classes by projecting the data onto a lower-dimensional space.
+
+---
+
+### **Summary of Key Techniques**
+
+* **Regression**: Predict continuous outcomes (e.g., Linear Regression).
+* **Classification**: Predict categorical outcomes (e.g., Logistic Regression, SVM).
+* **Clustering**: Group similar instances together (e.g., K-means, DBSCAN).
+* **Dimensionality Reduction**: Reduce feature space while retaining important information (e.g., PCA, t-SNE).
+
+---
+
+### **Practical Exercise**
+
+1. **Implement a Linear Regression**:
+
+   * Use the Boston Housing Dataset to predict house prices.
+   * Evaluate your model using MSE and $R^2$.
+
+2. **Build a Classification Model**:
+
+   * Implement a Logistic Regression model for classifying breast cancer data from the UCI repository.
+   * Evaluate the model using Accuracy, Precision, Recall, and F1-Score.
+
+3. \*\*Apply Clustering
+
+
+\*\*:
+
+* Use K-means to cluster the Iris dataset.
+* Visualize the clusters and compute the Silhouette Score.
+
+4. **Use PCA**:
+
+   * Apply PCA on the MNIST dataset to reduce the dimensionality and visualize the first two components.
+
+---
+
+This handout is designed to cover the essentials of key machine learning techniques, with practical exercises to help students apply the concepts. Let me know if you’d like to add more details or examples!
