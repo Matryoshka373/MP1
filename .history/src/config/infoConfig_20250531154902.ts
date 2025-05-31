@@ -11,18 +11,16 @@ export const email = 'hanwang721124@gmail.com'
 export const githubUsername = 'Maytroshka373'
 
 // about page
-export const aboutMeHeadline = 'Chasing Curiosity, One Step at a Time'
+export const aboutMeHeadline = 'Chasing Curiosty, One Step at a Time'
 export const aboutParagraphs = [
   "I'm Han Wang, a passionate learner and explorer who believes that every day brings an opportunity to grow."+
   "From the winding streets of Shanghai to the quiet corners of my thoughts," + 
   "I'm always seeking inspiration and new ways to connect ideas, people, and cultures.",
   'A fan of the saying "C\'est la vie" from the streets of Paris, I embrace life\'s unpredictability with open arms.'+
   'Whether I\' diving into the world of technology, unraveling the complexities of Computer Science and Artificial Intelligence,'+
-  'or simply enjoying a coffee on a Sunday morning, I find joy in every moment.'+
-  'I live by the motto, \"La vida es un sue\u00f1o"--life is but a dream--and I\'m here to make mine as exciting as possible.',
-  "I\'ve spent the last few years honing my skills in CS and AI, and I\'m always looking for new challenges. In a world filled with noise, I try to focus on what truly matters:"+
-  "learning, growing, and making meaningful connections. Whether in Spanish, French, or English, I believe in the power of language to bridge gaps and foster understanding."+
-  'So,welcome to my little corner of the internet--let\'s connect and share ideas that spark curiosity and creativity.',
+  'or simply enjoying a coffe on a Sunday mornign, I find joy in every moment.'+
+  'I live by the motto, \"La vida es un sueno"--life is but a dream--and ',
+  "I started this blog to share the insights I learn every day. Most blogs focus on education in Artificial Intelligence and general computer science, while others share the life lessons I've learned.",
 ]
 
 // blog

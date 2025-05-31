@@ -21,7 +21,7 @@ export const aboutParagraphs = [
   'or simply enjoying a coffee on a Sunday morning, I find joy in every moment.'+
   'I live by the motto, \"La vida es un sue\u00f1o"--life is but a dream--and I\'m here to make mine as exciting as possible.',
   "I\'ve spent the last few years honing my skills in CS and AI, and I\'m always looking for new challenges. In a world filled with noise, I try to focus on what truly matters:"+
-  "learning, growing, and making meaningful connections. Whether in Spanish, French, or English, I believe in the power of language to bridge gaps and foster understanding."+
+  "learning, growing, and making meaningful connections. Whether in Spanish, French, or English, I believe in the power of language to bridge gaps and foster understangding."+
   'So,welcome to my little corner of the internet--let\'s connect and share ideas that spark curiosity and creativity.',
 ]
 
