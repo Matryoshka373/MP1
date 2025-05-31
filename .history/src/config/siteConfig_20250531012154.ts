@@ -1,5 +1,5 @@
 // site config
-export const utm_source = 'hanwang-portfolio'
+export const utm_source = 'derek-portfolio'
 
 
 // navigation config
